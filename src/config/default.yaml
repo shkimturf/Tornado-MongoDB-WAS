@@ -1,0 +1,18 @@
+server:
+    port: 8080
+
+    session_expire_days: 1
+
+    template_dir: templates/
+    static_dir: statics/
+    favicon_path: favicon/
+
+    cookie_secret: cookie_secret_here
+
+    database:
+        host: 127.0.0.1
+        port: 5000
+
+        db_name: db_name
+
+    debug: 1
