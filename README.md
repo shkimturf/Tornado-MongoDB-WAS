@@ -30,7 +30,7 @@ Run below shell script to install python modules
 
 ## Run templates
 
-Set **$PYTHONPATH** to add src folder absolute path and run src/server/main.py
+Set **$PYTHONPATH** to add src folder absolute path and run **src/server/main.py**
 
 ## Usage
 
