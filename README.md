@@ -30,7 +30,7 @@ Run below shell script to install python modules
 
 ## Run templates
 
-Set $PYTHONPATH to src folder absolute path and run src/server/main.py
+Set **$PYTHONPATH** to add src folder absolute path and run src/server/main.py
 
 ## Usage
 
@@ -86,9 +86,9 @@ You can support authenticated handler easily by placing some decorators to suppo
 
 ### CRUD
 
-Inherit HDMongoSyncObject or HDMongoAsyncObject to support CRUD.
-Use HDMongoAsyncObject on tornado server IOLoop to support asynchronous database connections.
-If you want to use other database platform, inherit HDORMObject and implement CRUD functions.
+Inherit **HDMongoSyncObject** or **HDMongoAsyncObject** to support CRUD.
+Use **HDMongoAsyncObject** on tornado server IOLoop to support asynchronous database connections.
+If you want to use other database platform, inherit **HDORMObject** and implement CRUD functions.
 
 ## Author
 
