@@ -19,7 +19,7 @@ Python 2.7
 There are some modules to run this templates.
 Run below shell script to install python modules
 
-"'
+```
     pip install tornado
     pip install pymongo
     pip install motor
@@ -27,7 +27,7 @@ Run below shell script to install python modules
     pip install pycrypto
     pip install apscheduler
     pip install python-dateutil
-"'
+```
 
 ## Run templates
 
@@ -39,7 +39,7 @@ Set $PYTHONPATH to src folder absolute path and run src/server/main.py
 
 Set your customized config values on config/default.yaml
 
-"'
+```
     port: 8080
 
         session_expire_days: 1
@@ -57,13 +57,13 @@ Set your customized config values on config/default.yaml
             db_name: db_name
 
         debug: 1
-"'
+```
 
 ### Authentications
 
 You can support authenticated handler easily by placing some decorators to support authenticated API or some script.
 
-"' python
+``` python
     @tornado.web.asynchronous
     @authenticated_api
     @tornado.gen.coroutine
@@ -83,7 +83,7 @@ You can support authenticated handler easily by placing some decorators to suppo
     		pass
     	else:
     		raise tornado.web.HTTPError(403)
-"'
+```
 
 ### CRUD
 
