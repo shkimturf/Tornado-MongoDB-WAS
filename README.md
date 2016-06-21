@@ -20,13 +20,13 @@ There are some modules to run this templates.
 Run below shell script to install python modules
 
 "'
-pip install tornado
-pip install pymongo
-pip install motor
-pip install pyyaml
-pip install pycrypto
-pip install apscheduler
-pip install python-dateutil
+    pip install tornado
+    pip install pymongo
+    pip install motor
+    pip install pyyaml
+    pip install pycrypto
+    pip install apscheduler
+    pip install python-dateutil
 "'
 
 ## Run templates
@@ -40,23 +40,23 @@ Set $PYTHONPATH to src folder absolute path and run src/server/main.py
 Set your customized config values on config/default.yaml
 
 "'
-port: 8080
+    port: 8080
 
-    session_expire_days: 1
+        session_expire_days: 1
 
-    template_dir: templates/
-    static_dir: statics/
-    favicon_path: favicon/
+        template_dir: templates/
+        static_dir: statics/
+        favicon_path: favicon/
 
-    cookie_secret: cookie_secret_here
+        cookie_secret: cookie_secret_here
 
-    database:
-        host: 127.0.0.1
-        port: 5000
+        database:
+            host: 127.0.0.1
+            port: 5000
 
-        db_name: db_name
+            db_name: db_name
 
-    debug: 1
+        debug: 1
 "'
 
 ### Authentications
@@ -64,25 +64,25 @@ port: 8080
 You can support authenticated handler easily by placing some decorators to support authenticated API or some script.
 
 "' python
-@tornado.web.asynchronous
-@authenticated_api
-@tornado.gen.coroutine
-class AuthenticatedAPIHandler(CommonHandler):
+    @tornado.web.asynchronous
+    @authenticated_api
+    @tornado.gen.coroutine
+    class AuthenticatedAPIHandler(CommonHandler):
 
-	print self.current_user # returns HDUser instance
-	self.finish_and_return()
+    	print self.current_user # returns HDUser instance
+    	self.finish_and_return()
 
-@tornado.web.asynchronous
-@tornado.gen.coroutine
-class UnDecoratedAuthenticatedAPIHandler(CommonHandler):
+    @tornado.web.asynchronous
+    @tornado.gen.coroutine
+    class UnDecoratedAuthenticatedAPIHandler(CommonHandler):
 	
-	yield self.get_current_user()
-	if self.current_user is not None:
-		# authenticated
-		# do something
-		pass
-	else:
-		raise tornado.web.HTTPError(403)
+    	yield self.get_current_user()
+    	if self.current_user is not None:
+    		# authenticated
+    		# do something
+    		pass
+    	else:
+    		raise tornado.web.HTTPError(403)
 "'
 
 ### CRUD
