@@ -1,7 +1,6 @@
 # Tornado+MongoDB-WAS
 
 Template server based python tornado using mongo database.
-
 This template has been implemented below features.
 
  1. Asynchronous connections on mongoDB and use it on operation.
@@ -88,9 +87,7 @@ You can support authenticated handler easily by placing some decorators to suppo
 ### CRUD
 
 Inherit HDMongoSyncObject or HDMongoAsyncObject to support CRUD.
-
 Use HDMongoAsyncObject on tornado server IOLoop to support asynchronous database connections.
-
 If you want to use other database platform, inherit HDORMObject and implement CRUD functions.
 
 ## Author
